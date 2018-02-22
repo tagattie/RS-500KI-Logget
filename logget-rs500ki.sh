@@ -63,7 +63,7 @@ done
 
 if [ -f ${SNAPDIR}/${TMPFILE} ]; then
     sort ${SNAPDIR}/${TMPFILE} | \
-        logger -t hgw -p local3.info
+        logger -t hgw -p ${SYSLOG_FACILITY}.${SYSLOG_LEVEL}
 fi
 
 rm -f ${SNAPDIR}/${TMPFILE}

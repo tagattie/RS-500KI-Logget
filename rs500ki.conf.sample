@@ -1,3 +1,6 @@
 HGW_ADDR=<Hostname of RS-500KI>
 HGW_USER=user
 HGW_PASSWD=<Password of RS-500KI user>
+
+SYSLOG_FACILITY=local3
+SYSLOG_LEVEL=info
