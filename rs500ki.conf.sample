@@ -1,0 +1,3 @@
+HGW_ADDR=<Hostname of RS-500KI>
+HGW_USER=user
+HGW_PASSWD=<Password of RS-500KI user>
