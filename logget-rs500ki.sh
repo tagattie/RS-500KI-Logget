@@ -44,7 +44,7 @@ for v in ${vers}; do
          --user ${HGW_USER}:${HGW_PASSWD} ${HGW_URLBASE}/${LOGURL} | \
         tail -n +3 | \
         sed -e '$d'| \
-        sed -e 's/.*\. //' | \
+        sed -e 's/^ *[0-9]*\. //' | \
         sed -e 's///' > ${SNAPDIR}/${SNAPFILE}
 
     if [ -z "${LATEST_IN_OLD}" ]; then
