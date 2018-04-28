@@ -50,7 +50,8 @@ for v in ${vers}; do
     if [ -z "${LATEST_IN_OLD}" ]; then
         cat ${SNAPDIR}/${SNAPFILE} >> ${SNAPDIR}/${TMPFILE}
     else
-        LINE_IN_CUR=$(grep -n "${LATEST_IN_OLD}" ${SNAPDIR}/${SNAPFILE})
+        LINE_IN_CUR=$(grep -n "${LATEST_IN_OLD}" ${SNAPDIR}/${SNAPFILE} | \
+                          head -n 1)
         if [ -n "${LINE_IN_CUR}" ]; then
             lnum=$(echo "${LINE_IN_CUR}" | \
                        awk -F: '{print $1}')
